@@ -45,7 +45,7 @@ img {
   margin-left: 20px;
 }
 .breadcrumbs {
-  margin: 45px 0px 50px;
+  margin: 45px 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,7 +82,9 @@ img {
   display: flex;
 }
 .sidebar {
-  width: 560px;
+  width: 100%;
+  max-width: 560px;
+  min-width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,8 +150,8 @@ img {
   padding: 20px 40px;
   height: 100%;
   border-radius: 8px;
-  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.135216);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.135216);
   margin-bottom: 28px;
 }
 .sidebar-content-inner {
@@ -252,14 +254,19 @@ img {
   background-color: #5148c7;
 }
 .card-containers {
-  width: 1260px;
+  max-width: 1260px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: -30px;
+  margin-bottom: -14px;
+}
+.card-containers-inner{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 .results {
   height: 40px;
@@ -317,8 +324,8 @@ img {
   padding: 20px;
   border-radius: 8px;
   border: none;
-  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.135216);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.135216);
   background-image: url(img/search.svg);
   background-repeat: no-repeat;
   background-position: right 20px top 50%;
@@ -352,8 +359,8 @@ img {
 .card-container-inner {
   border-radius: 8px;
   margin: 0 15px 30px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   background-color: #fff;
 }
@@ -417,7 +424,7 @@ img {
   display: flex;
   height: 45px;
 }
-.card-bottom a {
+.card-bottom button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,12 +441,15 @@ img {
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .wishlist {
   background-color: #ededed;
   color: #2c2c2c;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+  width: 50%;
+  border:none;
 }
 .wishlist span {
   background-image: url(img/heart.svg);
@@ -455,6 +465,8 @@ img {
   color: #fff;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+  border:none;
+  width: 50%;
 }
 .add-to-cart span {
   background-image: url(img/shopping-bag.svg);

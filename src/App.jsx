@@ -11,6 +11,8 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage";
 const App = () => {
   return (
     <div className="App">
+      <div className="container">
+          <div className="container-inner">
       <Header />
       <Router>
         <Breadcrumbs />
@@ -31,6 +33,8 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
+      </div>
+      </div>
     </div>
   );
 };

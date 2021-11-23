@@ -1,20 +1,22 @@
 import React from "react";
-import SearchBar from "./components/SearchBar/SearchBar";
-import Card from "./components/Card/Card";
 import Filter from "./components/Filter/Filter";
+import Pagination from "../../components/Pagination/Pagination";
+import CardsContainer from "../../components/Cards/Components/CardsContainer";
 
 const HomePage = () => {
-  return (
-    <div>
-      <div>
+  return (<div>
+    <main className="main">
+
         <Filter />
-      </div>
-      <div>
-        <SearchBar />
-        <div>
-          <Card title="Test" />
+
+      <div className="card-containers">
+        <div className="card-containers-inner">
+          <CardsContainer/>
         </div>
       </div>
+
+    </main>
+    <Pagination/>
     </div>
   );
 };
