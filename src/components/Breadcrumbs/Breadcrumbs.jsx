@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Breadcrumbs() {
+const Breadcrumbs = () => {
   return (
     <div className="breadcrumbs">
       <Link to="/" className="breadcrumbs-home"></Link>
@@ -10,6 +10,6 @@ function Breadcrumbs() {
       <div className="breadcrumbs-page">Electronics</div>
     </div>
   );
-}
+};
 
 export default Breadcrumbs;

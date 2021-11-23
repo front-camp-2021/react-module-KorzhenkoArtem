@@ -1,6 +1,6 @@
 import React from "react";
 
-function CardItem(props) {
+const Card = (props) => {
   return (
     <div class="card-container">
       <div className="card-container-inner">
@@ -12,7 +12,7 @@ function CardItem(props) {
             <span className="price">$899</span>
           </div>
           <div className="card-description">
-            <h4>Les Paul Prophecy</h4>
+            <h4>{props.title}</h4>
             <p>Featuring Fishman Fluence Pickups With Custom Voicings!</p>
           </div>
         </div>
@@ -27,6 +27,6 @@ function CardItem(props) {
       </div>
     </div>
   );
-}
+};
 
-export default CardItem;
+export default Card;
