@@ -12,28 +12,28 @@ const App = () => {
   return (
     <div className="App">
       <div className="container">
-          <div className="container-inner">
-      <Header />
-      <Router>
-        <Breadcrumbs />
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route exact path="/product/:id" children={<ProductPage />} />
-          <Route exact path="/wishlist">
-            <WishlistPage />
-          </Route>
-          <Route exact path="/discounts">
-            <DiscountsPage />
-          </Route>
+        <div className="container-inner">
+          <Header />
+          <Router>
+            <Breadcrumbs />
+            <Switch>
+              <Route exact path="/">
+                <HomePage />
+              </Route>
+              <Route exact path="/product/:id" children={<ProductPage />} />
+              <Route exact path="/wishlist">
+                <WishlistPage />
+              </Route>
+              <Route exact path="/discounts">
+                <DiscountsPage />
+              </Route>
 
-          <Route>
-            <ErrorPage />
-          </Route>
-        </Switch>
-      </Router>
-      </div>
+              <Route>
+                <ErrorPage />
+              </Route>
+            </Switch>
+          </Router>
+        </div>
       </div>
     </div>
   );
