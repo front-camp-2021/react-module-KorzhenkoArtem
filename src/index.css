@@ -399,9 +399,7 @@ img {
 .rate {
   background-color: #6f64f8;
   color: #fff;
-  padding: 5px 10px;
-  height: 30px;
-  width: 65px;
+  padding: 7px 35px 5px 10px;
   border-radius: 3px;
   background-image: url(img/star.svg);
   background-repeat: no-repeat;

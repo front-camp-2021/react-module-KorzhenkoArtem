@@ -17,6 +17,7 @@ const Card = (props) => {
             <img src={props.image} alt={props.title} />
           </div>
           <div className="rate-and-price">
+            <span className="rate">{props.rating}</span>
             <span className="price">${props.price}</span>
           </div>
           <div className="card-description">
