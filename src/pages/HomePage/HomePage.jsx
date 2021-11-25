@@ -50,7 +50,16 @@ const HomePage = () => {
               <SearchBar />
 
               {products.map((el) => {
-                return <Card key={el.id} title={el.title} />;
+                return (
+                  <Card
+                    key={el.id}
+                    id={el.id}
+                    title={el.title}
+                    price={el.price}
+                    rating={el.rating}
+                    image={el.images[0]}
+                  />
+                );
               })}
             </section>
           </div>
