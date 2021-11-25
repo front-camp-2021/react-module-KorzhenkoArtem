@@ -8,10 +8,17 @@ import { getProducts } from "../../services/API";
 const HomePage = () => {
   const [products, setProducts] = useState();
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   const fetchProducts = async () => {
-    const data = await getProducts();
-    setProducts(data);
+    try {
+      const data = await getProducts();
+      setProducts(data);
+    } catch (err) {
+      console.error(err);
+      setError(true);
+    }
+
     setLoading(false);
   };
 
@@ -19,6 +26,10 @@ const HomePage = () => {
     console.log("mounted");
     fetchProducts();
   }, []);
+
+  if (error) {
+    return <div>Something went wrong</div>;
+  }
 
   if (loading || !products) {
     return <div>loading...</div>;

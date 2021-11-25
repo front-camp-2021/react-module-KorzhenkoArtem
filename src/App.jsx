@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import WishlistPage from "./pages/WishlistPage/WishlistPage";
 import ProductPage from "./pages/ProductPage/ProductPage";
-import DiscountsPage from "./pages/DiscountsPage/DiscountsPage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 const App = () => {
@@ -23,9 +22,6 @@ const App = () => {
               <Route exact path="/product/:id" children={<ProductPage />} />
               <Route exact path="/wishlist">
                 <WishlistPage />
-              </Route>
-              <Route exact path="/discounts">
-                <DiscountsPage />
               </Route>
 
               <Route>
