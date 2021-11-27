@@ -263,7 +263,6 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: -14px;
 }
 .card-containers-inner {
   display: flex;
@@ -558,7 +557,6 @@ img {
     margin: 15px 5px;
   }
   .card-container {
-
   }
   .sidebar {
     display: none;
