@@ -10,7 +10,6 @@ const Card = (props) => {
   };
 
   return (
-    <div className="card-container">
       <div className="card-container-inner">
         <div className="card-top">
           <div className="card-image">
@@ -34,7 +33,6 @@ const Card = (props) => {
           </button>
         </div>
       </div>
-    </div>
   );
 };
 

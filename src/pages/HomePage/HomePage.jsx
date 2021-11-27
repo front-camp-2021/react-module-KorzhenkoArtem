@@ -48,7 +48,7 @@ const HomePage = () => {
                 <a className="likes"></a>
               </div>
               <SearchBar />
-
+              <div className="card-container">
               {products.map((el) => {
                 return (
                   <Card
@@ -61,6 +61,7 @@ const HomePage = () => {
                   />
                 );
               })}
+              </div>
             </section>
           </div>
         </div>
