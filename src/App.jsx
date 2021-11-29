@@ -12,8 +12,8 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="container-inner">
-          <Header />
           <Router>
+            <Header />
             <Breadcrumbs />
             <Switch>
               <Route exact path="/">

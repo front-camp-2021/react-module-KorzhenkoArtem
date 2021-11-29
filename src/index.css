@@ -43,6 +43,9 @@ img {
   -ms-flex-align: center;
   align-items: center;
 }
+header a {
+  display: flex;
+}
 .header h1 {
   font-size: 27px;
   color: #6f64f8;
@@ -299,6 +302,7 @@ img {
 .likes {
   width: 45px;
   height: 45px;
+  border: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,8 +578,8 @@ img {
   .container-inner {
     padding: 15px;
   }
-  .header {
-    padding-left: 15px;
+  .header h1 {
+    margin-left: 10px;
   }
   .breadcrumbs {
     margin: 15px 5px;
