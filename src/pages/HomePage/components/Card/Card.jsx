@@ -6,6 +6,7 @@ const Card = (props) => {
   };
   const addToWishlistHandler = () => {
     alert(`product with id ${props.id} should be added to wishlist`);
+    //add dispatch reducer
   };
 
   return (

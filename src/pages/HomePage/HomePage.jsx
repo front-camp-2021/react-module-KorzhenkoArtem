@@ -4,16 +4,26 @@ import Pagination from "../../components/Pagination/Pagination";
 import Card from "./components/Card/Card";
 import SearchBar from "./components/SearchBar/SearchBar";
 import { getProducts } from "../../services/API";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setAllProducts } from "../../features/products/productsSlice";
 
 const HomePage = () => {
-  const [products, setProducts] = useState();
+  const allProducts = useSelector((state) => {
+    return state.products.all;
+  });
+  const dispatch = useDispatch();
+  useEffect(() => {
+    console.log(allProducts);
+  }, [allProducts]);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   const fetchProducts = async () => {
     try {
       const data = await getProducts();
-      setProducts(data);
+      dispatch(setAllProducts(data));
     } catch (err) {
       console.error(err);
       setError(true);
@@ -31,7 +41,7 @@ const HomePage = () => {
     return <div>Something went wrong</div>;
   }
 
-  if (loading || !products) {
+  if (loading || !allProducts) {
     return <div>loading...</div>;
   }
 
@@ -40,16 +50,17 @@ const HomePage = () => {
       <main className="main">
         <Filter />
 
-        <div className="card-containers">
+        <section className="card-containers">
           <div className="card-containers-inner">
-            <section className="card-containers">
-              <div className="results">
-                <p>7,618 results found</p>
-                <a className="likes"></a>
-              </div>
-              <SearchBar />
-              <div className="card-container">
-              {products.map((el) => {
+            <div className="results">
+              <p>7,618 results found</p>
+              <Link to="/wishlist">
+                <button className="likes"></button>
+              </Link>
+            </div>
+            <SearchBar />
+            <div className="card-container">
+              {allProducts.map((el) => {
                 return (
                   <Card
                     key={el.id}
@@ -61,10 +72,9 @@ const HomePage = () => {
                   />
                 );
               })}
-              </div>
-            </section>
+            </div>
           </div>
-        </div>
+        </section>
       </main>
       <Pagination />
     </div>
