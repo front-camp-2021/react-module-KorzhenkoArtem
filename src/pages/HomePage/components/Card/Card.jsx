@@ -1,12 +1,16 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import {CHANGE_FAVORITE_STATUS} from "../../../../features/actions/actions";
 
 const Card = (props) => {
+  const dispatch = useDispatch();
   const addToCartHandler = () => {
     alert(`product with id ${props.id} should be added to cart`);
   };
   const addToWishlistHandler = () => {
     alert(`product with id ${props.id} should be added to wishlist`);
     //add dispatch reducer
+    dispatch({ type: CHANGE_FAVORITE_STATUS, payload: props.id })
   };
 
   return (

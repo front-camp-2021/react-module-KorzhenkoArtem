@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { BooksList } from "./components/books-list/books-list";
 import { BookPage } from "./pages/book-page/book-page";
 import { NotFoundPage } from "./pages/not-found/not-found";
+
 import { Layout } from "./components/layout/layout";
 
 function App() {
