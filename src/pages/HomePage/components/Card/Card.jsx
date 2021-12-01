@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import {CHANGE_FAVORITE_STATUS} from "../../../../features/actions/actions";
+import { CHANGE_WISHLIST_STATUS } from "../../../../features/actions/actions";
 
 const Card = (props) => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ const Card = (props) => {
   const addToWishlistHandler = () => {
     alert(`product with id ${props.id} should be added to wishlist`);
     //add dispatch reducer
-    dispatch({ type: CHANGE_FAVORITE_STATUS, payload: props.id })
+    dispatch({ type: CHANGE_WISHLIST_STATUS, payload: props.id });
   };
 
   return (
