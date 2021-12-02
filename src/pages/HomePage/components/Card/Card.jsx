@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { CHANGE_WISHLIST_STATUS } from "../../../../features/actions/actions";
+import { addToWishlist } from "../../../../features/products/productsSlice";
 
 const Card = (props) => {
   const dispatch = useDispatch();
@@ -8,9 +8,10 @@ const Card = (props) => {
     alert(`product with id ${props.id} should be added to cart`);
   };
   const addToWishlistHandler = () => {
-    alert(`product with id ${props.id} should be added to wishlist`);
+    // alert(`product with id ${props.id} should be added to wishlist`);
     //add dispatch reducer
-    dispatch({ type: CHANGE_WISHLIST_STATUS, payload: props.id });
+    // dispatch({ type: CHANGE_WISHLIST_STATUS, payload: props.id });
+    dispatch(addToWishlist(props.id));
   };
 
   return (

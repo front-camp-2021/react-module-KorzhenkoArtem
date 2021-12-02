@@ -4,6 +4,7 @@ export const productsSlice = createSlice({
   name: "products",
   initialState: {
     all: [],
+    wishlistedProducts: [],
     temp: "something",
   },
   reducers: {
@@ -13,9 +14,15 @@ export const productsSlice = createSlice({
     setAllProducts: (state, action) => {
       state.all = action.payload;
     },
+    addToWishlist: (state, action) => {
+      const id = action.payload;
+      //add product card
+      console.log(id);
+      return state;
+    },
   },
 });
 
-export const { setAllProducts } = productsSlice.actions;
+export const { setAllProducts, addToWishlist } = productsSlice.actions;
 
 export default productsSlice.reducer;

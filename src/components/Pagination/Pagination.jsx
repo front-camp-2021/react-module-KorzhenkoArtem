@@ -2,8 +2,8 @@ import React from "react";
 
 function Pagination(props) {
   return (
-      <div className="pagination">
-          <a href="#" className="arrow"></a>
+    <div className="pagination">
+      {/* <a href="#" className="arrow"></a>
           <div className="pagination-bg">
               <a href="#">1</a>
               <a href="#" className="active">2</a>
@@ -16,8 +16,8 @@ function Pagination(props) {
               <a href="#">9</a>
               <a href="#">10</a>
           </div>
-          <a href="#" className="arrow"></a>
-      </div>
+          <a href="#" className="arrow"></a> */}
+    </div>
   );
 }
 

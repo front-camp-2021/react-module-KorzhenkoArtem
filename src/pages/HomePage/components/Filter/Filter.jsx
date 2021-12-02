@@ -8,17 +8,17 @@ const Filter = () => {
     <aside className="sidebar">
       <div className="sidebar-filters">
         <p>Filters</p>
-        <a href="#" className="sidebar-close"><span className="sidebar-shevrons"></span></a>
+        <button className="sidebar-close">
+          <span className="sidebar-shevrons"></span>
+        </button>
       </div>
       <div className="sidebar-content">
-        <FilterPrice/>
-        <FilterCategory/>
-        <FilterBrand/>
+        <FilterPrice />
+        <FilterCategory />
+        <FilterBrand />
       </div>
-      <a href="#" className="sidebar-btn">Clear all filters</a>
+      <button className="sidebar-btn">Clear all filters</button>
     </aside>
-
-
   );
 };
 
